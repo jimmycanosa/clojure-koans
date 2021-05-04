@@ -25,11 +25,10 @@
                    result))))))
 
 (comment (def solution2 (fn [f coll]
-                          (into {}
-                                (let [ks (set (map f coll))]
-                                  (for [k ks]
-                                    [k (vec (filter #(= k (f %)) coll))]))))))
+                          (into {} (let [ks (set (map f coll))]
+                                     (for [k ks]
+                                       [k (vec (filter #(= k (f %)) coll))]))))))
 
 (comment (def solution3 #(reduce
-                          (fn [m x] (assoc m (% x) (conj (m (% x) []) x)))
-                          {} %2)))
+                          (fn [m x]
+                           (assoc m (% x) (conj (m (% x) []) x))) {} %2)))
