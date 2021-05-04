@@ -13,9 +13,9 @@
 (comment (= (solution1 #{[1 2] [2 3]} #{[2 3] [3 4]})
             #{[1 2] [3 4]}))
 
-(def solution1
-  (fn [a b]
-    (set (filter #(nil? (b (a %))) (into a b)))))
+(comment (def solution1
+           (fn [a b]
+             (set (filter #(nil? (b (a %))) (into a b))))))
 
-(def solution2
-  (fn [a b] (into (set (remove b a)) (remove a b))))
+(comment (def solution2
+           (fn [a b] (into (set (remove b a)) (remove a b)))))
