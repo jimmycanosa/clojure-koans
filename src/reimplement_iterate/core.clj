@@ -11,7 +11,7 @@
 
 (def solution1
   (fn fake-iteration [f n]
-    (cons n (lazy-seq (fake-iteration f (f n))))))
+    (lazy-seq (cons n (fake-iteration f (f n))))))
 
 (def solution2
   (fn it [f x] (lazy-cat [x] (it f (f x)))))
