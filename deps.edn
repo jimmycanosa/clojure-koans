@@ -1,0 +1,3 @@
+{:deps
+ {org.clojure/core.logic {:mvn/version "1.0.0"}
+  org.clojure/spec.alpha {:mvn/version "0.2.194"}}}
